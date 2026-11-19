@@ -752,7 +752,7 @@ code,kbd,samp,pre,button,input,select,textarea{font-family:inherit !important}
   <!-- ===================== 9. 工作经历 ===================== -->
   <section class="card no-hint" id="c9">
     <div class="card-head blue" data-tip="t-section-9">
-      <span><span class="req">*</span>工作经历</span>
+      <span><span class="req">*</span>工作经历<span class="sec-toggle" id="jingliToggle">点击此处查看全部示例</span></span>
       <button class="btn-add" data-tip="b-addJingli"><i>＋</i> 新增</button>
     </div>
     <div class="card-body" style="padding:0">
@@ -770,7 +770,7 @@ code,kbd,samp,pre,button,input,select,textarea{font-family:inherit !important}
           </thead>
           <tbody>
             <tr class="sample-row">
-              <td><span class="tag">点击此处查看全部示例</span><div class="ops"><span class="op" data-tip="b-editJingli">修改</span><span class="op" data-tip="b-upJingli">上传其它附件</span><span class="op del" data-tip="b-delRow">删除</span></div></td>
+              <td><div class="ops"><span class="op" data-tip="b-editJingli">修改</span><span class="op" data-tip="b-upJingli">上传其它附件</span><span class="op del" data-tip="b-delRow">删除</span></div></td>
               <td data-tip="th-9-start">2006-08</td>
               <td data-tip="th-9-end">2009-09</td>
               <td data-tip="th-9-unit">烟台环球机床附件集团有限公司-研究所-机械设计员</td>
@@ -778,7 +778,7 @@ code,kbd,samp,pre,button,input,select,textarea{font-family:inherit !important}
               <td data-tip="th-9-title">无</td>
             </tr>
             <tr class="sample-row">
-              <td><span class="tag">点击此处查看全部示例</span><div class="ops"><span class="op" data-tip="b-editJingli">修改</span><span class="op" data-tip="b-upJingli">上传其它附件</span><span class="op del" data-tip="b-delRow">删除</span></div></td>
+              <td><div class="ops"><span class="op" data-tip="b-editJingli">修改</span><span class="op" data-tip="b-upJingli">上传其它附件</span><span class="op del" data-tip="b-delRow">删除</span></div></td>
               <td data-tip="th-9-start">2009-10</td>
               <td data-tip="th-9-end">2009-10</td>
               <td data-tip="th-9-unit">待业</td>
@@ -786,7 +786,7 @@ code,kbd,samp,pre,button,input,select,textarea{font-family:inherit !important}
               <td data-tip="th-9-title">无</td>
             </tr>
             <tr class="sample-row">
-              <td><span class="tag">点击此处查看全部示例</span><div class="ops"><span class="op" data-tip="b-editJingli">修改</span><span class="op" data-tip="b-upJingli">上传其它附件</span><span class="op del" data-tip="b-delRow">删除</span></div></td>
+              <td><div class="ops"><span class="op" data-tip="b-editJingli">修改</span><span class="op" data-tip="b-upJingli">上传其它附件</span><span class="op del" data-tip="b-delRow">删除</span></div></td>
               <td data-tip="th-9-start">2009-11</td>
               <td data-tip="th-9-end">至今</td>
               <td data-tip="th-9-unit">烟台杰瑞石油装备技术有限公司-技术部-机械设计工程师</td>
@@ -1362,16 +1362,20 @@ document.getElementById('btnPhotoUp').addEventListener('click', function(e){
   e.stopPropagation(); openGal('photo');
 });
 /* 考核情况：板块级示例开关（标题处） */
-document.getElementById('kaoheToggle').addEventListener('click', function(e){
-  e.stopPropagation();
-  var sec = document.getElementById('c6');
-  var shown = !!sec.querySelector('td.rev');
-  Array.prototype.forEach.call(sec.querySelectorAll('tr.sample-row td'), function(td){
-    if(td.querySelector('.ex')) td.classList.toggle('rev', !shown);
+function bindSecToggle(toggleId, secId){
+  document.getElementById(toggleId).addEventListener('click', function(e){
+    e.stopPropagation();
+    var sec = document.getElementById(secId);
+    var shown = !!sec.querySelector('td.rev');
+    Array.prototype.forEach.call(sec.querySelectorAll('tr.sample-row td'), function(td){
+      if(td.querySelector('.ex')) td.classList.toggle('rev', !shown);
+    });
+    this.textContent = !shown ? '再点一下收起示例' : '点击此处查看全部示例';
+    this.classList.toggle('off', !shown);
   });
-  this.textContent = !shown ? '再点一下收起示例' : '点击此处查看全部示例';
-  this.classList.toggle('off', !shown);
-});
+}
+bindSecToggle('kaoheToggle', 'c6');
+bindSecToggle('jingliToggle', 'c9');
 
 /* 「获取个人继续教育信息」点击后直接显示五行示例（弹窗仍由 data-tip 委托弹出） */
 document.getElementById('btnJixuGet').addEventListener('click', function(){
