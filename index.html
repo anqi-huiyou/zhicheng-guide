@@ -681,7 +681,7 @@ code,kbd,samp,pre,button,input,select,textarea{font-family:inherit !important}
       <button class="btn-add" data-tip="b-addJixu"><i>＋</i> 新增</button>
     </div>
     <div class="card-body">
-      <div class="tbl-wrap">
+      <div class="tbl-wrap" id="jixuTblWrap" style="display:none">
         <table class="tbl">
           <thead>
             <tr>
@@ -695,7 +695,7 @@ code,kbd,samp,pre,button,input,select,textarea{font-family:inherit !important}
           </thead>
           <tbody>
             <tr class="sample-row">
-              <td><span class="tag">点击此处查看全部示例</span><div class="ops"><span class="op" data-tip="b-editJixu">修改</span><span class="op del" data-tip="b-delRow">删除</span></div></td>
+              <td><div class="ops"><span class="op" data-tip="b-editJixu">修改</span><span class="op del" data-tip="b-delRow">删除</span></div></td>
               <td data-tip="th-8-year">2022</td>
               <td data-tip="th-8-gx">30</td>
               <td data-tip="th-8-zy">60</td>
@@ -703,7 +703,7 @@ code,kbd,samp,pre,button,input,select,textarea{font-family:inherit !important}
               <td data-tip="th-8-pass">合格</td>
             </tr>
             <tr class="sample-row">
-              <td><span class="tag">点击此处查看全部示例</span><div class="ops"><span class="op" data-tip="b-editJixu">修改</span><span class="op del" data-tip="b-delRow">删除</span></div></td>
+              <td><div class="ops"><span class="op" data-tip="b-editJixu">修改</span><span class="op del" data-tip="b-delRow">删除</span></div></td>
               <td data-tip="th-8-year">2023</td>
               <td data-tip="th-8-gx">30</td>
               <td data-tip="th-8-zy">60</td>
@@ -711,7 +711,7 @@ code,kbd,samp,pre,button,input,select,textarea{font-family:inherit !important}
               <td data-tip="th-8-pass">合格</td>
             </tr>
             <tr class="sample-row">
-              <td><span class="tag">点击此处查看全部示例</span><div class="ops"><span class="op" data-tip="b-editJixu">修改</span><span class="op del" data-tip="b-delRow">删除</span></div></td>
+              <td><div class="ops"><span class="op" data-tip="b-editJixu">修改</span><span class="op del" data-tip="b-delRow">删除</span></div></td>
               <td data-tip="th-8-year">2024</td>
               <td data-tip="th-8-gx">30</td>
               <td data-tip="th-8-zy">60</td>
@@ -719,7 +719,7 @@ code,kbd,samp,pre,button,input,select,textarea{font-family:inherit !important}
               <td data-tip="th-8-pass">合格</td>
             </tr>
             <tr class="sample-row">
-              <td><span class="tag">点击此处查看全部示例</span><div class="ops"><span class="op" data-tip="b-editJixu">修改</span><span class="op del" data-tip="b-delRow">删除</span></div></td>
+              <td><div class="ops"><span class="op" data-tip="b-editJixu">修改</span><span class="op del" data-tip="b-delRow">删除</span></div></td>
               <td data-tip="th-8-year">2025</td>
               <td data-tip="th-8-gx">30</td>
               <td data-tip="th-8-zy">60</td>
@@ -727,7 +727,7 @@ code,kbd,samp,pre,button,input,select,textarea{font-family:inherit !important}
               <td data-tip="th-8-pass">合格</td>
             </tr>
             <tr class="sample-row">
-              <td><span class="tag">点击此处查看全部示例</span><div class="ops"><span class="op" data-tip="b-editJixu">修改</span><span class="op del" data-tip="b-delRow">删除</span></div></td>
+              <td><div class="ops"><span class="op" data-tip="b-editJixu">修改</span><span class="op del" data-tip="b-delRow">删除</span></div></td>
               <td data-tip="th-8-year">2026</td>
               <td data-tip="th-8-gx">30</td>
               <td data-tip="th-8-zy">60</td>
@@ -738,7 +738,7 @@ code,kbd,samp,pre,button,input,select,textarea{font-family:inherit !important}
         </table>
       </div>
       <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap;align-items:center">
-        <button class="btn-aux" data-tip="b-getjixu">⚡ 点击获取个人继续教育信息</button>
+        <button class="btn-aux" id="btnJixuGet" data-tip="b-getjixu">⚡ 点击获取个人继续教育信息</button>
       </div>
     </div>
   </section>
@@ -1354,6 +1354,13 @@ function closeGal(){
 /* 「上传照片」按钮：点击弹出头像上传对话框示意 */
 document.getElementById('btnPhotoUp').addEventListener('click', function(e){
   e.stopPropagation(); openGal('photo');
+});
+/* 「获取个人继续教育信息」点击后直接显示五行示例（弹窗仍由 data-tip 委托弹出） */
+document.getElementById('btnJixuGet').addEventListener('click', function(){
+  document.getElementById('jixuTblWrap').style.display = '';
+  Array.prototype.forEach.call(document.querySelectorAll('#jixuTblWrap tr.sample-row td'), function(td){
+    if(td.querySelector('.ex')) td.classList.add('rev');
+  });
 });
 /* 「点击获取个人继续教育信息」按钮：弹出提示信息示意 */
 /* .glink 在捕获阶段拦截，优先于填写要求弹窗 */
