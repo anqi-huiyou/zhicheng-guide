@@ -152,6 +152,9 @@ table.tbl tr.sample-row td:not(.rev):not(:first-child):not(.empty-cell)::before{
   content:"点击查看示例与要求";position:absolute;left:12px;top:50%;transform:translateY(-50%);
   color:#ccd4de;font-size:11.5px;pointer-events:none;white-space:nowrap}
 table.tbl tr.sample-row:hover td:not(.rev):not(:first-child)::before{color:#a9c3e0}
+/* 学历信息及以下板块：不显示「点击查看示例与要求」占位 */
+.no-hint table.tbl tr.sample-row td:not(.rev):not(:first-child):not(.empty-cell)::before{content:none}
+.no-hint .field input::placeholder{color:transparent}
 table.tbl tr.sample-row td.rev{background:#f8fbff}
 table.tbl tr.sample-row:hover td.rev{background:#f2f9ff}
 .empty-cell{color:#b6bcc5;font-size:12.5px;text-align:center;padding:26px 0 !important;cursor:pointer}
@@ -475,7 +478,7 @@ code,kbd,samp,pre,button,input,select,textarea{font-family:inherit !important}
   </section>
 
   <!-- ===================== 3. 学历信息 ===================== -->
-  <section class="card" id="c3">
+  <section class="card no-hint" id="c3">
     <div class="card-head blue" data-tip="t-section-3">
       <span><span class="req">*</span>学历信息<span class="req" style="font-size:12px;font-weight:600">（*必填项）(填写全日制学历、评审依据学历，需要上传附件)</span></span>
       <button class="btn-add" data-tip="b-addEdu"><i>＋</i> 新增</button>
@@ -514,7 +517,7 @@ code,kbd,samp,pre,button,input,select,textarea{font-family:inherit !important}
   </section>
 
   <!-- ===================== 4. 现专业技术职称、职业资格 ===================== -->
-  <section class="card" id="c4">
+  <section class="card no-hint" id="c4">
     <div class="card-head blue" data-tip="t-section-4">
       <span><span class="req">*</span>现专业技术职称、职业资格</span>
       <button class="btn-add" data-tip="b-addTitle"><i>＋</i> 新增</button>
@@ -556,7 +559,7 @@ code,kbd,samp,pre,button,input,select,textarea{font-family:inherit !important}
   </section>
 
   <!-- ===================== 5. 现任（含兼任）行政职务 ===================== -->
-  <section class="card" id="c5">
+  <section class="card no-hint" id="c5">
     <div class="card-head blue" data-tip="t-section-5">
       <span>现任（含兼任）行政职务</span>
       <button class="btn-add" data-tip="b-addZhiwu"><i>＋</i> 新增</button>
@@ -584,7 +587,7 @@ code,kbd,samp,pre,button,input,select,textarea{font-family:inherit !important}
   </section>
 
   <!-- ===================== 6. 考核情况 ===================== -->
-  <section class="card" id="c6">
+  <section class="card no-hint" id="c6">
     <div class="card-head blue" data-tip="t-section-6">
       <span><span class="req">*</span>任现职以来考核情况信息</span>
       <button class="btn-add" data-tip="b-addKaohe"><i>＋</i> 新增</button>
@@ -644,7 +647,7 @@ code,kbd,samp,pre,button,input,select,textarea{font-family:inherit !important}
   </section>
 
   <!-- ===================== 7. 外语/计算机 ===================== -->
-  <section class="card" id="c7">
+  <section class="card no-hint" id="c7">
     <div class="card-head blue" data-tip="t-section-7">
       <span>外语/计算机</span>
       <button class="btn-add" data-tip="b-addWaiyu"><i>＋</i> 新增</button>
@@ -672,7 +675,7 @@ code,kbd,samp,pre,button,input,select,textarea{font-family:inherit !important}
   </section>
 
   <!-- ===================== 8. 继续教育 ===================== -->
-  <section class="card" id="c8">
+  <section class="card no-hint" id="c8">
     <div class="card-head blue" data-tip="t-section-8">
       <span><span class="req">*</span>近五年学习培训及继续教育经历</span>
       <button class="btn-add" data-tip="b-addJixu"><i>＋</i> 新增</button>
@@ -741,7 +744,7 @@ code,kbd,samp,pre,button,input,select,textarea{font-family:inherit !important}
   </section>
 
   <!-- ===================== 9. 工作经历 ===================== -->
-  <section class="card" id="c9">
+  <section class="card no-hint" id="c9">
     <div class="card-head blue" data-tip="t-section-9">
       <span><span class="req">*</span>工作经历</span>
       <button class="btn-add" data-tip="b-addJingli"><i>＋</i> 新增</button>
@@ -791,7 +794,7 @@ code,kbd,samp,pre,button,input,select,textarea{font-family:inherit !important}
   </section>
 
   <!-- ===================== 10. 代表性成果 ===================== -->
-  <section class="card" id="c10">
+  <section class="card no-hint" id="c10">
     <div class="card-head blue" data-tip="t-section-10">
       <span><span class="req">*</span>任现职以来取得的代表性成果</span>
       <button class="btn-add" data-tip="b-addCheng"><i>＋</i> 新增</button>
@@ -888,7 +891,7 @@ code,kbd,samp,pre,button,input,select,textarea{font-family:inherit !important}
   </section>
 
   <!-- ===================== 11. 工作成绩及表现 ===================== -->
-  <section class="card" id="c11">
+  <section class="card no-hint" id="c11">
     <div class="card-head blue" data-tip="t-section-11">
       <span><span class="req">*</span>任现职以来主要专业技术工作成绩及表现</span>
       <button class="btn-add" data-tip="b-addPerf"><i>＋</i> 新增</button>
@@ -903,7 +906,7 @@ code,kbd,samp,pre,button,input,select,textarea{font-family:inherit !important}
   </section>
 
   <!-- ===================== 12. 六公开监督卡 ===================== -->
-  <section class="card" id="c12">
+  <section class="card no-hint" id="c12">
     <div class="card-head blue" data-tip="t-section-12">
       <span>六公开监督卡</span>
       <button class="btn-add" data-tip="b-upLiugong">⬆ 上传</button>
@@ -928,7 +931,7 @@ code,kbd,samp,pre,button,input,select,textarea{font-family:inherit !important}
   </section>
 
   <!-- ===================== 13. 社会兼职 ===================== -->
-  <section class="card" id="c13">
+  <section class="card no-hint" id="c13">
     <div class="card-head blue" data-tip="t-section-13">
       <span>参加何种学术团体并任何种职务，有何社会兼职</span>
       <button class="btn-add" data-tip="b-addJian"><i>＋</i> 新增</button>
@@ -951,7 +954,7 @@ code,kbd,samp,pre,button,input,select,textarea{font-family:inherit !important}
   </section>
 
   <!-- ===================== 14. 上传其它附件 ===================== -->
-  <section class="card" id="c14">
+  <section class="card no-hint" id="c14">
     <div class="card-head blue" data-tip="t-section-14">
       <span>上传其它附件</span>
       <button class="btn-add" data-tip="b-addOther">⬆ 上传</button>
@@ -989,7 +992,7 @@ code,kbd,samp,pre,button,input,select,textarea{font-family:inherit !important}
   </section>
 
   <!-- ===================== 15. 附件信息 ===================== -->
-  <section class="card" id="c15">
+  <section class="card no-hint" id="c15">
     <div class="card-head blue" data-tip="t-section-15">
       <span>附件信息</span>
     </div>
@@ -1385,7 +1388,7 @@ document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeTi
     if(!v){ var ph = inp.getAttribute('placeholder'); if(ph) v = ph.trim(); }
     if(v) inp.setAttribute('data-ex', v);
     inp.value = '';
-    inp.setAttribute('placeholder', '点击查看示例与要求');
+    inp.setAttribute('placeholder', f.closest('.no-hint') ? '' : '点击查看示例与要求');
     inp.setAttribute('readonly', 'readonly');
   });
 
