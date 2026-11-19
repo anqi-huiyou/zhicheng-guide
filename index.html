@@ -175,6 +175,12 @@ table.tbl tr.sample-row:hover td.rev{background:#f2f9ff}
 .sample-row .tag:hover{background:#1c6dc4;transform:translateY(-1px)}
 .sample-row .tag.off{background:#6b7f95;box-shadow:0 2px 6px rgba(107,127,149,.3)}
 .sample-row .tag.off:hover{background:#5a6c80}
+/* 板块级「点击此处查看全部示例」链接（考核情况标题处） */
+.sec-toggle{display:inline-block;font-size:12.5px;font-weight:800;letter-spacing:.5px;color:#fff;background:#2f7fd6;
+  padding:4px 12px;border-radius:14px;cursor:pointer;margin-left:12px;vertical-align:middle;box-shadow:0 2px 6px rgba(47,127,214,.3)}
+.sec-toggle:hover{background:#1c6dc4;transform:translateY(-1px)}
+.sec-toggle.off{background:#6b7f95;box-shadow:0 2px 6px rgba(107,127,149,.3)}
+.sec-toggle.off:hover{background:#5a6c80}
 
 /* ============ 提示条 ============ */
 .hint{background:#fffbe6;border-left:3px solid #fadb14;border-radius:2px;padding:5px 9px;font-size:11.8px;color:#7a5c00;line-height:1.5;cursor:pointer;margin-top:4px}
@@ -589,7 +595,7 @@ code,kbd,samp,pre,button,input,select,textarea{font-family:inherit !important}
   <!-- ===================== 6. 考核情况 ===================== -->
   <section class="card no-hint" id="c6">
     <div class="card-head blue" data-tip="t-section-6">
-      <span><span class="req">*</span>任现职以来考核情况信息</span>
+      <span><span class="req">*</span>任现职以来考核情况信息<span class="sec-toggle" id="kaoheToggle">点击此处查看全部示例</span></span>
       <button class="btn-add" data-tip="b-addKaohe"><i>＋</i> 新增</button>
     </div>
     <div class="card-body" style="padding:0">
@@ -606,35 +612,35 @@ code,kbd,samp,pre,button,input,select,textarea{font-family:inherit !important}
           </thead>
           <tbody>
             <tr class="sample-row">
-              <td><span class="tag">点击此处查看全部示例</span><div class="ops"><span class="op" data-tip="b-editKaohe">修改</span><span class="op" data-tip="b-upKaohe">上传其它附件</span><span class="op del" data-tip="b-delRow">删除</span></div></td>
+              <td><div class="ops"><span class="op" data-tip="b-editKaohe">修改</span><span class="op" data-tip="b-upKaohe">上传其它附件</span><span class="op del" data-tip="b-delRow">删除</span></div></td>
               <td data-tip="th-6-year">2025</td>
               <td data-tip="th-6-post">工程师</td>
               <td data-tip="th-6-grade">合格</td>
               <td data-tip="th-6-unit">烟台杰瑞石油装备技术有限公司</td>
             </tr>
             <tr class="sample-row">
-              <td><span class="tag">点击此处查看全部示例</span><div class="ops"><span class="op" data-tip="b-editKaohe">修改</span><span class="op" data-tip="b-upKaohe">上传其它附件</span><span class="op del" data-tip="b-delRow">删除</span></div></td>
+              <td><div class="ops"><span class="op" data-tip="b-editKaohe">修改</span><span class="op" data-tip="b-upKaohe">上传其它附件</span><span class="op del" data-tip="b-delRow">删除</span></div></td>
               <td data-tip="th-6-year">2024</td>
               <td data-tip="th-6-post">工程师</td>
               <td data-tip="th-6-grade">合格</td>
               <td data-tip="th-6-unit">烟台杰瑞石油装备技术有限公司</td>
             </tr>
             <tr class="sample-row">
-              <td><span class="tag">点击此处查看全部示例</span><div class="ops"><span class="op" data-tip="b-editKaohe">修改</span><span class="op" data-tip="b-upKaohe">上传其它附件</span><span class="op del" data-tip="b-delRow">删除</span></div></td>
+              <td><div class="ops"><span class="op" data-tip="b-editKaohe">修改</span><span class="op" data-tip="b-upKaohe">上传其它附件</span><span class="op del" data-tip="b-delRow">删除</span></div></td>
               <td data-tip="th-6-year">2023</td>
               <td data-tip="th-6-post">工程师</td>
               <td data-tip="th-6-grade">合格</td>
               <td data-tip="th-6-unit">烟台杰瑞石油装备技术有限公司</td>
             </tr>
             <tr class="sample-row">
-              <td><span class="tag">点击此处查看全部示例</span><div class="ops"><span class="op" data-tip="b-editKaohe">修改</span><span class="op" data-tip="b-upKaohe">上传其它附件</span><span class="op del" data-tip="b-delRow">删除</span></div></td>
+              <td><div class="ops"><span class="op" data-tip="b-editKaohe">修改</span><span class="op" data-tip="b-upKaohe">上传其它附件</span><span class="op del" data-tip="b-delRow">删除</span></div></td>
               <td data-tip="th-6-year">2022</td>
               <td data-tip="th-6-post">工程师</td>
               <td data-tip="th-6-grade">合格</td>
               <td data-tip="th-6-unit">烟台杰瑞石油装备技术有限公司</td>
             </tr>
             <tr class="sample-row">
-              <td><span class="tag">点击此处查看全部示例</span><div class="ops"><span class="op" data-tip="b-editKaohe">修改</span><span class="op" data-tip="b-upKaohe">上传其它附件</span><span class="op del" data-tip="b-delRow">删除</span></div></td>
+              <td><div class="ops"><span class="op" data-tip="b-editKaohe">修改</span><span class="op" data-tip="b-upKaohe">上传其它附件</span><span class="op del" data-tip="b-delRow">删除</span></div></td>
               <td data-tip="th-6-year">2021</td>
               <td data-tip="th-6-post">机械工程</td>
               <td data-tip="th-6-grade">合格</td>
@@ -1355,6 +1361,18 @@ function closeGal(){
 document.getElementById('btnPhotoUp').addEventListener('click', function(e){
   e.stopPropagation(); openGal('photo');
 });
+/* 考核情况：板块级示例开关（标题处） */
+document.getElementById('kaoheToggle').addEventListener('click', function(e){
+  e.stopPropagation();
+  var sec = document.getElementById('c6');
+  var shown = !!sec.querySelector('td.rev');
+  Array.prototype.forEach.call(sec.querySelectorAll('tr.sample-row td'), function(td){
+    if(td.querySelector('.ex')) td.classList.toggle('rev', !shown);
+  });
+  this.textContent = !shown ? '再点一下收起示例' : '点击此处查看全部示例';
+  this.classList.toggle('off', !shown);
+});
+
 /* 「获取个人继续教育信息」点击后直接显示五行示例（弹窗仍由 data-tip 委托弹出） */
 document.getElementById('btnJixuGet').addEventListener('click', function(){
   document.getElementById('jixuTblWrap').style.display = '';
