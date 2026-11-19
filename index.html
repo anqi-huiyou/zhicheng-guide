@@ -802,7 +802,7 @@ code,kbd,samp,pre,button,input,select,textarea{font-family:inherit !important}
   <!-- ===================== 10. 代表性成果 ===================== -->
   <section class="card no-hint" id="c10">
     <div class="card-head blue" data-tip="t-section-10">
-      <span><span class="req">*</span>任现职以来取得的代表性成果</span>
+      <span><span class="req">*</span>任现职以来取得的代表性成果<span class="sec-toggle" id="chengToggle">点击此处查看全部示例</span></span>
       <button class="btn-add" data-tip="b-addCheng"><i>＋</i> 新增</button>
     </div>
     <div class="card-body" style="padding:0">
@@ -825,7 +825,7 @@ code,kbd,samp,pre,button,input,select,textarea{font-family:inherit !important}
           </thead>
           <tbody>
             <tr class="sample-row">
-              <td><span class="tag">点击此处查看全部示例</span><div class="ops"><span class="op" data-tip="b-editCheng">修改</span><span class="op" data-tip="b-upCheng">上传其它附件</span><span class="op del" data-tip="b-delRow">删除</span></div></td>
+              <td><div class="ops"><span class="op" data-tip="b-editCheng">修改</span><span class="op" data-tip="b-upCheng">上传其它附件</span><span class="op del" data-tip="b-delRow">删除</span></div></td>
               <td data-tip="th-10-order">1</td>
               <td data-tip="th-10-name">（获奖/表彰）科学技术奖：大型露天煤矿开采技术研究</td>
               <td data-tip="th-10-time">2023-05</td>
@@ -838,7 +838,7 @@ code,kbd,samp,pre,button,input,select,textarea{font-family:inherit !important}
               <td data-tip="th-10-verify">—</td>
             </tr>
             <tr class="sample-row">
-              <td><span class="tag">点击此处查看全部示例</span><div class="ops"><span class="op" data-tip="b-editCheng">修改</span><span class="op" data-tip="b-upCheng">上传其它附件</span><span class="op del" data-tip="b-delRow">删除</span></div></td>
+              <td><div class="ops"><span class="op" data-tip="b-editCheng">修改</span><span class="op" data-tip="b-upCheng">上传其它附件</span><span class="op del" data-tip="b-delRow">删除</span></div></td>
               <td data-tip="th-10-order">2</td>
               <td data-tip="th-10-name">（课题/项目）科研课题：新型焊接工装夹具研发</td>
               <td data-tip="th-10-time">2023-09</td>
@@ -851,7 +851,7 @@ code,kbd,samp,pre,button,input,select,textarea{font-family:inherit !important}
               <td data-tip="th-10-verify">—</td>
             </tr>
             <tr class="sample-row">
-              <td><span class="tag">点击此处查看全部示例</span><div class="ops"><span class="op" data-tip="b-editCheng">修改</span><span class="op" data-tip="b-upCheng">上传其它附件</span><span class="op del" data-tip="b-delRow">删除</span></div></td>
+              <td><div class="ops"><span class="op" data-tip="b-editCheng">修改</span><span class="op" data-tip="b-upCheng">上传其它附件</span><span class="op del" data-tip="b-delRow">删除</span></div></td>
               <td data-tip="th-10-order">3</td>
               <td data-tip="th-10-name">（专利）一种焊接工装夹具</td>
               <td data-tip="th-10-time">2022-09</td>
@@ -864,7 +864,7 @@ code,kbd,samp,pre,button,input,select,textarea{font-family:inherit !important}
               <td data-tip="th-10-verify">—</td>
             </tr>
             <tr class="sample-row">
-              <td><span class="tag">点击此处查看全部示例</span><div class="ops"><span class="op" data-tip="b-editCheng">修改</span><span class="op" data-tip="b-upCheng">上传其它附件</span><span class="op del" data-tip="b-delRow">删除</span></div></td>
+              <td><div class="ops"><span class="op" data-tip="b-editCheng">修改</span><span class="op" data-tip="b-upCheng">上传其它附件</span><span class="op del" data-tip="b-delRow">删除</span></div></td>
               <td data-tip="th-10-order">4</td>
               <td data-tip="th-10-name">（论文/著作）论文：面向复杂工况的焊接工艺优化研究</td>
               <td data-tip="th-10-time">2023-06</td>
@@ -877,7 +877,7 @@ code,kbd,samp,pre,button,input,select,textarea{font-family:inherit !important}
               <td data-tip="th-10-verify">https://www.cnki.net/…</td>
             </tr>
             <tr class="sample-row">
-              <td><span class="tag">点击此处查看全部示例</span><div class="ops"><span class="op" data-tip="b-editCheng">修改</span><span class="op" data-tip="b-upCheng">上传其它附件</span><span class="op del" data-tip="b-delRow">删除</span></div></td>
+              <td><div class="ops"><span class="op" data-tip="b-editCheng">修改</span><span class="op" data-tip="b-upCheng">上传其它附件</span><span class="op del" data-tip="b-delRow">删除</span></div></td>
               <td data-tip="th-10-order">5</td>
               <td data-tip="th-10-name">（其他）软著：焊接工艺参数智能推荐软件V1.0</td>
               <td data-tip="th-10-time">2024-03</td>
@@ -1376,6 +1376,7 @@ function bindSecToggle(toggleId, secId){
 }
 bindSecToggle('kaoheToggle', 'c6');
 bindSecToggle('jingliToggle', 'c9');
+bindSecToggle('chengToggle', 'c10');
 
 /* 「获取个人继续教育信息」点击后直接显示五行示例（弹窗仍由 data-tip 委托弹出） */
 document.getElementById('btnJixuGet').addEventListener('click', function(){
