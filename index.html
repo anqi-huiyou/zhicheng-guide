@@ -1287,6 +1287,10 @@ function escHTML(s){
 function openTip(key, example, exLabel){
   var tip = key ? TIPS[key] : null;
   var body = '';
+  /* 填写要求在前，正确示例在后 */
+  if(tip){
+    body += '<div class="t">' + tip.h + '</div>';
+  }
   if(example){
     body += '<div class="ex-block">'
           + '<div class="ex-hd"><span class="ex-tag">正确示例</span>' + escHTML(exLabel || '这一处应这样填') + '</div>'
@@ -1294,9 +1298,7 @@ function openTip(key, example, exLabel){
           + '<div class="ex-note">↑ 该示例已同时填入页面中对应的位置，关掉弹窗即可看到</div>'
           + '</div>';
   }
-  if(tip){
-    body += '<div class="t">' + tip.h + '</div>';
-  } else if(!example){
+  if(!tip && !example){
     body += '<div class="t">（此处的填写要求整理中，如有疑问请咨询集团人事）</div>';
   }
   document.getElementById('tipTitle').textContent = tip ? tip.t : (exLabel || '这一处的正确示例');
