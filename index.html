@@ -219,6 +219,7 @@ table.tbl tr.sample-row:hover td.rev{background:#f2f9ff}
 .modal-body{padding:16px 18px;font-size:16px;line-height:1.85}
 .modal-body .t{color:#333}
 .modal-body .t .danger{color:#d9363e;font-weight:700}
+.empty-cell .danger{color:#d9363e;font-weight:700}
 .modal-body .t ul{margin:8px 0;padding-left:20px}
 .modal-body .t li{margin:6px 0}
 .modal-body .t code{background:#f2f5f9;border:1px solid #dce3ec;border-radius:3px;padding:1px 6px;font-size:15.5px;color:#12467f;font-family:inherit}
@@ -929,7 +930,7 @@ code,kbd,samp,pre,button,input,select,textarea{font-family:inherit !important}
             </tr>
           </thead>
           <tbody>
-            <tr><td colspan="4" class="empty-cell" data-tip="t-section-12">六公开监督卡由<b>公司统一提供并盖章</b>，员工按通知上传即可</td></tr>
+            <tr><td colspan="4" class="empty-cell" data-tip="t-section-12">六公开监督卡由<span class="danger">公司统一提供并盖章</span>，员工按通知上传即可</td></tr>
           </tbody>
         </table>
       </div>
@@ -1188,7 +1189,7 @@ var TIPS = {
 "t-section-9":{t:"工作经历",h:"<b>时间与社保一致、必须连续，空档填「待业」；最多 6 条</b>，超出并入上一条。<ul><li>劳动合同 → 传首页＋尾页；找不到 → 传盖章《工作经历证明》；</li><li>省外社保 → 另打印带章证明上传；</li><li>更名/子公司/社保代缴 → 附对应证明。</li></ul>"},
 "t-section-10":{t:"代表性成果",h:"<b>5 类合计 ≤15 条，按类填、不混填：</b>获奖/表彰、课题/项目、专利、论文/著作、其他。<ul><li>名称与原文一字不差；</li><li><span class='danger'>不填现职称以前的、无证明材料的成果</span>；</li><li>同一成果只填最高奖项。</li></ul><div class='tip-example'>字段要求点表头，材料要求点「批准机关」格。</div>"},
 "t-section-11":{t:"工作成绩及表现",h:"<b>只写上一级职称之后的业绩，1100—1200 字：</b><ul><li><span class='danger'>不出现姓名</span>；</li><li>整段书写、<b>少分段</b>（分段多评审表显示不全）；</li><li>填完 → 检查评审表是否被截断。</li></ul>"},
-"t-section-12":{t:"六公开监督卡",h:"<b>公司统一提供并盖章</b>，等集团通知再上传。<ul><li>命名：<code>张三六公开</code>。</li></ul>"},
+"t-section-12":{t:"六公开监督卡",h:"<span class='danger'>公司统一提供并盖章</span>，等集团通知再上传。<ul><li>命名：<code>张三六公开</code>。</li></ul>"},
 "t-section-13":{t:"社会兼职",h:"<b>选填</b>，限50字；有聘书上传；没有不填。"},
 "t-section-14":{t:"上传其它附件",h:"<b>逐条点表格行看要求</b>。总要求：<ul><li>盖章处盖章（无则在首页）；审核人签字＋落款；复印件盖章；</li><li>命名 = 类别＋名称；单个 ≤5MB；超2页合并1个文件。</li></ul>"},
 "t-sec14-summary":{t:"《个人总结》（必传）",h:"<b>6 个标题一个不能删：</b>职业道德自述/专业简历/学习经历/能力业绩/获奖情况/申报理由。<ul><li>标题下提示语删掉；没内容的写「无」；</li><li>尽量 <b>5 页以上</b>；本人<b>手写签字且与正文同页</b>；</li><li><span class='danger'>盖章＋审核人签字＋落款</span>。命名：<code>张三个人总结</code>。</li></ul>"},
